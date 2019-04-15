@@ -1,0 +1,95 @@
+/* Variables */
+@charset 'UTF-8';
+
+/// @group    Configurações
+
+$colors: (
+  primary: (
+    darker    : #467d44,
+    dark      : #5ca456,
+    base      : #68b054,
+    lightest  : #8cbe50,
+    lighter   : #b1cd49,
+    light     : #d8de3f,
+  ),
+  light: (
+    base      : #ffffff,
+    lighten   : #efefef,
+    lighter   : #dddddd,
+    very-light: #d7d7d7,
+    lightest  : #d6d6d6,
+  ),
+  dark: (
+    base      : #000000,
+    darkest   : #2a2a2a,
+    darker    : #5f5f5f,
+    darken    : #9a9a9a,
+  ),
+  danger      : #f85757,
+  success     : #a4cb1b,
+  warning     : #febc11,
+
+) !default;
+
+/// @group    Fontes
+
+$font-config: (
+  thin: (
+    name: Montserrat,
+    weight: 100
+  ),
+  light: (
+    name: Montserrat,
+    weight: 300
+  ),
+  base: (
+    name: Montserrat,
+    weight: 400
+  ),
+  medium: (
+    name: Montserrat,
+    weight: 500
+  ),
+  bold: (
+    name: Montserrat,
+    weight: 700
+  ),
+  black: (
+    name: Montserrat,
+    weight: 900
+  )
+) !default;
+
+$font-fallback: Tahoma, Verdana, Segoe, sans-serif !default;
+
+/// @group    Fontes
+$font-sizes: (
+  xxxxbig :    58px,
+  xxxbig  :    49px,
+  xxbig   :    39px,
+  xbig    :    26px,
+  big     :    20px,
+  medium  :    14px,
+  small   :    12px,
+  xsmall  :    11px,
+) !default;
+
+/// @group    Breakpoints
+$breakpoints: (
+  small   : 641px,
+  medium  : 769px,
+  large   : 1025px,
+  xlarge  : 1321px,
+  xxlarge : 1921px
+) !default;
+
+/// @group Spaces
+$spaces: (
+  s       :     4px,
+  p       :     8px,
+  base    :     16px,
+  m       :     24px,
+  g       :     32px,
+  gg      :     48px,
+  xg      :     56px
+) !default;

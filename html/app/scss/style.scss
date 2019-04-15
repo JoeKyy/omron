@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+// @section  Settings [configurações]
+@import "./config";
+@import './sprite';
+
+// @section  Tools [ferramentas]
+@import './tools/functions/get-maps';
+@import './tools/functions/clean-unit';
+@import './tools/functions/converters';
+@import './tools/functions/color';
+@import './tools/functions/font-size';
+@import './tools/functions/transition';
+@import './tools/functions/space';
+@import './tools/mixins/column';
+@import './tools/mixins/content-width';
+@import './tools/mixins/default-feedback';
+@import './tools/mixins/font';
+@import './tools/mixins/generated-content';
+@import './tools/mixins/hidden-text';
+@import './tools/mixins/responsive';
+@import './tools/mixins/menu-barras';
+
+// @section  Generics [genericos]
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css";
+@import "./vendors/slick/slick";
+@import "./generics/reset";
+
+// @section  Elements [elementos]
+@import "./elements/typography";
+@import "./elements/input";
+@import "./elements/textarea";
+@import "./elements/select";
+@import "./elements/buttons";
+@import "./elements/header";
+@import "./elements/body";
+@import "./elements/main";
+@import "./elements/section";
+@import "./elements/article";
+@import "./elements/footer";
+
+// @section  Objects [objetos]
+// @section  Components [componentes]
+// @section  Pages
+// @section Helpers
+@import "./helpers";

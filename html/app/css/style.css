@@ -32,7 +32,7 @@
       .rotate button.slick-arrow.slick-prev:before {
         content: "\f0d9";
         text-indent: inherit;
-        font-size: 1.625rem;
+        font-size: 2.0625rem;
         color: #ffffff; }
     .slide button.slick-arrow.slick-next,
     .rotate button.slick-arrow.slick-next {
@@ -47,7 +47,7 @@
       .rotate button.slick-arrow.slick-next:before {
         content: "\f0da";
         text-indent: inherit;
-        font-size: 1.625rem;
+        font-size: 2.0625rem;
         color: #ffffff; }
 
 .slick-track {
@@ -136,7 +136,7 @@ strong {
 html {
   font-family: Montserrat, Tahoma, Verdana, Segoe, sans-serif;
   font-weight: 400;
-  font-size: 16px; }
+  font-size: 20px; }
 
 body {
   width: 100%;
@@ -206,47 +206,26 @@ body {
 label {
   white-space: nowrap; }
 
-.bg--primary-darker {
-  background-color: #467d44; }
-
 .bg--primary-dark {
-  background-color: #5ca456; }
+  background-color: #1d2442; }
 
 .bg--primary-base {
-  background-color: #68b054; }
-
-.bg--primary-lightest {
-  background-color: #8cbe50; }
-
-.bg--primary-lighter {
-  background-color: #b1cd49; }
+  background-color: #0068b7; }
 
 .bg--primary-light {
-  background-color: #d8de3f; }
+  background-color: #79c8ef; }
 
 .bg--light-base {
   background-color: #ffffff; }
-
-.bg--light-lighten {
-  background-color: #efefef; }
-
-.bg--light-lighter {
-  background-color: #dddddd; }
-
-.bg--light-very-light {
-  background-color: #d7d7d7; }
-
-.bg--light-lightest {
-  background-color: #d6d6d6; }
 
 .bg--dark-base {
   background-color: #000000; }
 
 .bg--dark-darkest {
-  background-color: #2a2a2a; }
+  background-color: #010300; }
 
 .bg--dark-darker {
-  background-color: #5f5f5f; }
+  background-color: #55565a; }
 
 .bg--dark-darken {
-  background-color: #9a9a9a; }
+  background-color: #959595; }

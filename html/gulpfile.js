@@ -109,7 +109,7 @@ gulp.task('clean:dist', function () {
 });
 
 gulp.task('default', function (callback) {
-  runSequence(['sass', 'browserSync'], 'watch',
+  runSequence(['sprite','sass', 'browserSync'], 'watch',
     callback
   )
 })

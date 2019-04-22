@@ -149,82 +149,114 @@ header {
   header nav ul li {
     font-family: Raleway;
     font-weight: 300;
-    display: inline-block;
     font-size: 0.8125rem;
     text-transform: uppercase; }
+    @media (min-width: 64.0625em) {
+      header nav ul li {
+        display: inline-block; } }
   header .header__top-menu {
     background: #55565a; }
-    header .header__top-menu div {
-      height: 50px; }
-    header .header__top-menu nav ul li {
-      position: relative;
-      margin: 0 8px; }
-      header .header__top-menu nav ul li:before {
-        content: "";
-        position: absolute;
-        top: 4px;
-        left: -10.4px;
-        display: block;
-        width: 1px;
-        height: 70%;
-        background: #ffffff; }
-      header .header__top-menu nav ul li:first-child:before {
-        display: none; }
+    header .header__top-menu nav ul {
+      justify-content: flex-start; }
+      @media (min-width: 64.0625em) {
+        header .header__top-menu nav ul {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          height: 50px; } }
+      header .header__top-menu nav ul li {
+        position: relative;
+        display: none;
+        margin: 8px; }
+        @media (min-width: 64.0625em) {
+          header .header__top-menu nav ul li {
+            display: inherit;
+            margin: 0 8px; } }
+        @media (min-width: 64.0625em) {
+          header .header__top-menu nav ul li:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: -10.4px;
+            display: block;
+            width: 1px;
+            height: 70%;
+            background: #ffffff; } }
+        header .header__top-menu nav ul li:first-child:before {
+          display: none; }
   header .header__menu {
     position: relative;
     background: #000000; }
     header .header__menu nav ul > li {
-      display: inline-flex;
-      align-items: center;
-      height: 70px;
-      margin: 0 8px;
+      margin: 0 16px;
       font-size: 1.125rem; }
+      @media (min-width: 64.0625em) {
+        header .header__menu nav ul > li {
+          display: inline-flex;
+          align-items: center;
+          height: 70px;
+          margin: 0 8px; } }
       header .header__menu nav ul > li:hover > a, header .header__menu nav ul > li.selected > a {
         position: relative;
         text-decoration: none; }
-        header .header__menu nav ul > li:hover > a:before, header .header__menu nav ul > li.selected > a:before {
-          content: "";
-          position: absolute;
-          bottom: -22px;
-          width: 100%;
-          height: 5px;
-          background: #ffffff; }
+        @media (min-width: 64.0625em) {
+          header .header__menu nav ul > li:hover > a:before, header .header__menu nav ul > li.selected > a:before {
+            content: "";
+            position: absolute;
+            bottom: -22px;
+            width: 100%;
+            height: 5px;
+            background: #ffffff; } }
       header .header__menu nav ul > li.sub-menu > a:after {
         content: "v";
         margin-left: 4px;
         font-size: 0.8125rem; }
-      header .header__menu nav ul > li.sub-menu > ul {
-        display: none; }
-      header .header__menu nav ul > li.sub-menu:hover > ul {
-        position: absolute;
-        top: 100%;
-        left: -100%;
-        display: block;
-        padding: 0 33em;
-        width: 1000em;
-        background: #ffffff; }
-        header .header__menu nav ul > li.sub-menu:hover > ul li {
-          display: inline-flex;
-          align-items: center;
-          height: 50px;
-          text-transform: initial;
-          overflow: hidden; }
-          header .header__menu nav ul > li.sub-menu:hover > ul li a {
-            position: relative;
-            color: #000000; }
-            header .header__menu nav ul > li.sub-menu:hover > ul li a:hover:before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              margin: auto auto -12px;
-              width: 100%;
-              height: 5px;
-              background: #000000; }
-    header .header__menu .row {
-      height: 70px; }
+      @media (min-width: 64.0625em) {
+        header .header__menu nav ul > li.sub-menu > ul {
+          display: none; } }
+      @media (min-width: 64.0625em) {
+        header .header__menu nav ul > li.sub-menu:hover > ul {
+          position: absolute;
+          top: 100%;
+          left: -100%;
+          display: block;
+          padding: 0 33em;
+          width: 1000em;
+          background: #ffffff; }
+          header .header__menu nav ul > li.sub-menu:hover > ul li {
+            display: inline-flex;
+            align-items: center;
+            height: 50px;
+            text-transform: initial;
+            overflow: hidden; }
+            header .header__menu nav ul > li.sub-menu:hover > ul li a {
+              position: relative;
+              color: #000000; }
+              header .header__menu nav ul > li.sub-menu:hover > ul li a:hover:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto auto -12px;
+                width: 100%;
+                height: 5px;
+                background: #000000; } }
+    @media (min-width: 64.0625em) {
+      header .header__menu .row {
+        height: 70px; } }
+  header .header__menuContent {
+    position: absolute;
+    top: -10000%;
+    width: 100%; }
+    @media (min-width: 64.0625em) {
+      header .header__menuContent {
+        position: inherit;
+        width: inherit; } }
+    header .header__menuContent.open {
+      position: relative;
+      top: 0; }
   header .header__logo {
     background-image: url("../images/sprite.png");
     background-position: 0px -293px;
@@ -234,16 +266,25 @@ header {
     text-indent: -9999px;
     position: relative;
     z-index: 2;
-    margin: 0 auto; }
+    margin: 16px auto; }
+    @media (min-width: 64.0625em) {
+      header .header__logo {
+        margin: 0 auto; } }
     header .header__logo a {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-  header .header__social {
+  header .header__social nav ul {
     display: flex;
-    justify-content: flex-end; }
+    align-content: center;
+    justify-content: center;
+    margin: 16px 0; }
+    @media (min-width: 64.0625em) {
+      header .header__social nav ul {
+        justify-content: flex-end;
+        margin: inherit; } }
     header .header__social nav ul > li {
       margin: 0 4px;
       font-size: 1.25rem; }
@@ -259,6 +300,51 @@ header {
           top: 2px; }
       header .header__social nav ul > li:hover:before {
         display: none; }
+  header button.botao-menu {
+    position: absolute;
+    top: -4px;
+    right: 16px;
+    padding: 24px 8px;
+    background-color: transparent;
+    border: inherit; }
+    header button.botao-menu span[aria-hidden] {
+      position: relative;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      user-select: none; }
+      header button.botao-menu span[aria-hidden], header button.botao-menu span[aria-hidden]::before, header button.botao-menu span[aria-hidden]::after {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #0068b7;
+        outline: 1px solid transparent;
+        transition-property: background-color, transform;
+        transition-duration: 0.3s; }
+      header button.botao-menu span[aria-hidden]::before, header button.botao-menu span[aria-hidden]::after {
+        position: absolute;
+        content: ""; }
+      header button.botao-menu span[aria-hidden]::before {
+        top: -8px; }
+      header button.botao-menu span[aria-hidden]::after {
+        top: 8px; }
+    header button.botao-menu span:not([aria-hidden]) {
+      overflow: hidden;
+      position: absolute;
+      top: auto;
+      left: -10000px;
+      height: 1px;
+      width: 1px; }
+    header button.botao-menu.open {
+      z-index: 1000; }
+      header button.botao-menu.open span[aria-hidden] {
+        background-color: transparent; }
+      header button.botao-menu.open span[aria-hidden]::before {
+        transform: translateY(8px) rotate(45deg); }
+      header button.botao-menu.open span[aria-hidden]::after {
+        transform: translateY(-8px) rotate(-45deg); }
+    @media (min-width: 64.0625em) {
+      header button.botao-menu {
+        display: none; } }
 
 html {
   font-family: Montserrat, Tahoma, Verdana, Segoe, sans-serif;
@@ -267,6 +353,7 @@ html {
 
 body {
   width: 100%;
+  background: pink;
   color: #000000;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden; }

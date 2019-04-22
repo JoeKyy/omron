@@ -2,10 +2,10 @@ $(function () {
 	$(".botao-menu").on('click', function (e) {
 		if (!$(this).hasClass("open")) {
 			$(this).addClass("open");
-			$('header nav').addClass("open");
+			$('header .header__menuContent').addClass("open");
 		} else {
 			$(this).removeClass("open");
-			$('header nav').removeClass("open");
+			$('header .header__menuContent').removeClass("open");
 		}
 	});
 

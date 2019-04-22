@@ -2,7 +2,7 @@ footer {
 	$self: &;
 
 	.h4 {
-		@include responsive(medium) {
+		@include responsive(large) {
 			text-align: left;
 		}
 
@@ -47,14 +47,14 @@ footer {
 		background: color(light);
 
 		ul {
-			@include responsive(medium) {
+			@include responsive(large) {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
 
 			li {
-				@include responsive(medium) {
+				@include responsive(large) {
 					margin: 0 space(p);
 					text-align: inherit
 				}
@@ -75,7 +75,7 @@ footer {
 		@include sprite($lgo-omron);
 		@include hidden-text();
 
-		@include responsive(medium) {
+		@include responsive(large) {
 			margin: 0 0 0 auto;
 		}
 
@@ -98,7 +98,7 @@ footer {
 	.#{ $self }__tecnologia_japonesa {
 		@include sprite($icn-tecnologia_japonesa);
 		@include hidden-text();
-		@include responsive(medium) {
+		@include responsive(large) {
 			margin: 0 0 0 auto;
 		}
 

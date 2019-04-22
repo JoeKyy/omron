@@ -34,7 +34,7 @@ header {
 		}
 	}
 
-	.top-menu {
+	.#{ $self }__top-menu {
 		background: color(dark, darker);
 
 		div {
@@ -71,7 +71,7 @@ header {
 		}
 	}
 
-	.menu {
+	.#{ $self }__menu {
 		position: relative;
 
 		background: color(dark, base);

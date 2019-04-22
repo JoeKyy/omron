@@ -273,15 +273,19 @@ header {
 						border: thin solid color(light);
 						border-radius: 100%;
 
+						&:before {
+							display: none;
+						}
+
+						&:hover {
+							&:before {
+								display: none;
+							}
+						}
+
 						i {
 							position: relative;
 							top: 2px;
-						}
-					}
-
-					&:hover {
-						&:before {
-							display: none;
 						}
 					}
 				}

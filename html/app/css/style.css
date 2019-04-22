@@ -295,11 +295,13 @@ header {
         text-align: center;
         border: thin solid #ffffff;
         border-radius: 100%; }
+        header .header__social nav ul > li a:before {
+          display: none; }
+        header .header__social nav ul > li a:hover:before {
+          display: none; }
         header .header__social nav ul > li a i {
           position: relative;
           top: 2px; }
-      header .header__social nav ul > li:hover:before {
-        display: none; }
   header button.botao-menu {
     position: absolute;
     top: -4px;

@@ -1,3 +1,17 @@
+/*
+	Theme Name: OMRON
+	Theme URI: https: //www.omronbrasil.com
+	Description: OMRON WordPress Theme
+	Version: 1.0.0
+	Author: ATOMO COMUNICAÇÃO
+	Author URI: http: //www.atomocom.com.br/
+	Tags: HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+
 @charset 'UTF-8';
 // @section  Settings [configurações]
 @import "./config";
@@ -20,26 +34,95 @@
 @import './tools/mixins/responsive';
 @import './tools/mixins/menu-barras';
 
+/*------------------------------------*\
+    VENDORS
+\*------------------------------------*/
+
 // @section  Generics [genericos]
 @import "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css";
 @import "./vendors/slick/slick";
+
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+
 @import "./generics/reset";
 
 // @section  Elements [elementos]
+
+/*------------------------------------*\
+    TYPOGRAPHY
+\*------------------------------------*/
+
 @import "./elements/typography";
+
+/*------------------------------------*\
+    INPUT
+\*------------------------------------*/
+
 @import "./elements/input";
+
+/*------------------------------------*\
+    TEXTAREA
+\*------------------------------------*/
+
 @import "./elements/textarea";
+
+/*------------------------------------*\
+    SELECT
+\*------------------------------------*/
+
 @import "./elements/select";
+
+/*------------------------------------*\
+    BUTTONS
+\*------------------------------------*/
+
 @import "./elements/buttons";
+
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+
 @import "./elements/header";
+
+/*------------------------------------*\
+    BODY
+\*------------------------------------*/
+
 @import "./elements/body";
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
 @import "./elements/main";
+
+/*------------------------------------*\
+    SECTION
+\*------------------------------------*/
+
 @import "./elements/section";
+
+/*------------------------------------*\
+    ARTICLE
+\*------------------------------------*/
+
 @import "./elements/article";
+
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+
 @import "./elements/footer";
 
 // @section  Objects [objetos]
 // @section  Components [componentes]
 // @section  Pages
 // @section Helpers
+
+/*------------------------------------*\
+    HELPERS
+\*------------------------------------*/
+
 @import "./helpers";

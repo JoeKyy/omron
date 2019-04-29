@@ -52,13 +52,7 @@
         </div>
     </footer>
     <!--build:js js/main.min.js -->
-    <script src="<?php echo get_template_directory_uri(); ?>js/jquery-3.3.1.slim.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>js/modernizr.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>js/slick.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>js/popper.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>js/bootstrap.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>js/fontsmoothie.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>js/jquery.functions.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/main.min.js"></script>
     <!-- endbuild -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

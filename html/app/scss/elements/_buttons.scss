@@ -1,3 +1,14 @@
+a,
 [type="submit"],
-button,
-.btn {}
+button{
+	&.btn {
+		@include font(bold);
+
+		text-transform: uppercase;
+		border-radius: 25px;
+
+		&-primary {
+			background-color: color(primary);
+		}
+	}
+}

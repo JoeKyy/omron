@@ -1,3 +1,114 @@
 &[role='home'] {
+	section {
+		&.vision {
+			&__content {
+				padding: space(gg) 0;
 
+				color: color(dark, darker);
+
+				background-color: color(light, darken);
+
+				.list-itens {
+					p {
+						width: 150px;
+						min-height: 30px;
+						margin: space(p) auto;
+					}
+				}
+
+				.icn-01 {
+					@include sprite($icn-01);
+
+					display: block;
+					margin: 0 auto;
+				}
+
+				.icn-02 {
+					@include sprite($icn-02);
+
+					display: block;
+					margin: 0 auto;
+				}
+
+				.icn-03 {
+					@include sprite($icn-03);
+
+					display: block;
+					margin: 0 auto;
+				}
+
+				.icn-04 {
+					@include sprite($icn-04);
+
+					display: block;
+					margin: 0 auto;
+				}
+
+				.icn-05 {
+					@include sprite($icn-05);
+
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		&.product {
+			&__content {
+				overflow: hidden;
+
+				padding: space(gg) 0;
+
+				color: color(light);
+				background-color: color(dark);
+
+				IMG {
+					@include responsive(large) {
+						margin: -180px -80px -215px;
+					}
+					margin: -180px -170px -215px;
+					max-width: 200%;
+				}
+			}
+		}
+
+		&.video {
+			&__content {
+				@include responsive(large) {
+					margin: (space(gg) * 2) 0;
+				}
+
+				margin: space(m) 0;
+
+				img {
+					@include responsive(large) {
+						margin: 0;
+					}
+
+					margin: space(m) 0;
+				}
+
+				h4 {
+					font-size: font-size(big);
+
+					color: color(primary);
+					line-height: 1;
+				}
+
+				p {
+					font-size: font-size(medium) - 0.046;
+					color: color(dark, darken)
+				}
+			}
+		}
+
+		&.email {
+			&__content {
+				margin: space(gg) 0 0;
+				padding: space(gg) 0;
+
+				background-color: color(light, darken);
+			}
+		}
+	}
 }

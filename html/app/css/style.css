@@ -142,40 +142,99 @@ td {
 /*------------------------------------*\
     TYPOGRAPHY
 \*------------------------------------*/
-h1 {
+h1,
+.h1 {
+  font-family: Montserrat;
+  font-weight: 700;
   margin-bottom: 16px;
   font-size: 2.9375rem;
-  line-height: 1.2; }
+  line-height: 1.1; }
 
-h2 {
+h2,
+.h2 {
+  font-family: Montserrat;
+  font-weight: 700;
   margin-bottom: 16px;
   font-size: 2.1875rem;
-  line-height: 1.2; }
+  line-height: 1.1; }
 
-h3 {
+h3,
+.h3 {
+  font-family: Montserrat;
+  font-weight: 700;
   margin-bottom: 16px;
   font-size: 2.0625rem;
-  line-height: 1.2; }
+  line-height: 1.1; }
 
-h4 {
+h4,
+.h4 {
+  font-family: Montserrat;
+  font-weight: 700;
   margin-bottom: 16px;
-  font-size: 1.75rem;
-  line-height: 1.2; }
+  font-size: 1.625rem;
+  line-height: 1.1; }
 
-h5 {
+h5,
+.h5 {
+  font-family: Montserrat;
+  font-weight: 700;
   margin-bottom: 16px;
   font-size: 1.125rem;
-  line-height: 1.2; }
+  line-height: 1.1; }
 
-h6 {
+h6,
+.h6 {
+  font-family: Montserrat;
+  font-weight: 700;
   margin-bottom: 16px;
   font-size: 0.875rem;
-  line-height: 1.2; }
+  line-height: 1.1; }
+
+h1.h1, h1.h2, h1.h3, h1.h4, h1.h5, h1.h6,
+h2.h1,
+h2.h2,
+h2.h3,
+h2.h4,
+h2.h5,
+h2.h6,
+h3.h1,
+h3.h2,
+h3.h3,
+h3.h4,
+h3.h5,
+h3.h6,
+h4.h1,
+h4.h2,
+h4.h3,
+h4.h4,
+h4.h5,
+h4.h6,
+h5.h1,
+h5.h2,
+h5.h3,
+h5.h4,
+h5.h5,
+h5.h6,
+h6.h1,
+h6.h2,
+h6.h3,
+h6.h4,
+h6.h5,
+h6.h6 {
+  font-weight: 700 !important; }
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: inherit; }
 
 p {
   margin-bottom: 16px;
   font-size: 0.875rem;
-  line-height: 1.2; }
+  line-height: 1.1; }
 
 a {
   color: inherit; }
@@ -193,6 +252,10 @@ strong {
 /*------------------------------------*\
     INPUT
 \*------------------------------------*/
+input {
+  font-family: Montserrat;
+  font-weight: 700; }
+
 /*------------------------------------*\
     TEXTAREA
 \*------------------------------------*/
@@ -202,6 +265,18 @@ strong {
 /*------------------------------------*\
     BUTTONS
 \*------------------------------------*/
+a.btn,
+[type="submit"].btn,
+button.btn {
+  font-family: Montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 25px; }
+  a.btn-primary,
+  [type="submit"].btn-primary,
+  button.btn-primary {
+    background-color: #0068b7; }
+
 /*------------------------------------*\
     HEADER
 \*------------------------------------*/
@@ -442,8 +517,83 @@ body {
     MAIN
 \*------------------------------------*/
 main {
-  margin-top: 130px;
+  margin-top: 120px;
   min-height: calc(100vh - 110px); }
+  main[role='home'] section.vision__content {
+    padding: 48px 0;
+    color: #55565a;
+    background-color: #e2e3e3; }
+    main[role='home'] section.vision__content .list-itens p {
+      width: 150px;
+      min-height: 30px;
+      margin: 8px auto; }
+    main[role='home'] section.vision__content .icn-01 {
+      background-image: url("../images/sprite.png");
+      background-position: -230px 0px;
+      width: 72px;
+      height: 116px;
+      display: block;
+      margin: 0 auto; }
+    main[role='home'] section.vision__content .icn-02 {
+      background-image: url("../images/sprite.png");
+      background-position: -115px 0px;
+      width: 115px;
+      height: 104px;
+      display: block;
+      margin: 0 auto; }
+    main[role='home'] section.vision__content .icn-03 {
+      background-image: url("../images/sprite.png");
+      background-position: -230px -116px;
+      width: 54px;
+      height: 87px;
+      display: block;
+      margin: 0 auto; }
+    main[role='home'] section.vision__content .icn-04 {
+      background-image: url("../images/sprite.png");
+      background-position: -144px -104px;
+      width: 72px;
+      height: 116px;
+      display: block;
+      margin: 0 auto; }
+    main[role='home'] section.vision__content .icn-05 {
+      background-image: url("../images/sprite.png");
+      background-position: -81px -220px;
+      width: 81px;
+      height: 73px;
+      display: block;
+      margin: 0 auto; }
+  main[role='home'] section.product__content {
+    overflow: hidden;
+    padding: 48px 0;
+    color: #ffffff;
+    background-color: #000000; }
+    main[role='home'] section.product__content IMG {
+      margin: -180px -170px -215px;
+      max-width: 200%; }
+      @media (min-width: 64.0625em) {
+        main[role='home'] section.product__content IMG {
+          margin: -180px -80px -215px; } }
+  main[role='home'] section.video__content {
+    margin: 24px 0; }
+    @media (min-width: 64.0625em) {
+      main[role='home'] section.video__content {
+        margin: 96px 0; } }
+    main[role='home'] section.video__content img {
+      margin: 24px 0; }
+      @media (min-width: 64.0625em) {
+        main[role='home'] section.video__content img {
+          margin: 0; } }
+    main[role='home'] section.video__content h4 {
+      font-size: 1.875rem;
+      color: #0068b7;
+      line-height: 1; }
+    main[role='home'] section.video__content p {
+      font-size: 1.079rem;
+      color: #959595; }
+  main[role='home'] section.email__content {
+    margin: 48px 0 0;
+    padding: 48px 0;
+    background-color: #e2e3e3; }
 
 /*------------------------------------*\
     SECTION
@@ -626,3 +776,43 @@ label {
 
 .bg--dark-darken {
   background-color: #959595; }
+
+.text-size-xxxbig {
+  font-size: 2.9375rem;
+  line-height: 1.1; }
+
+.text-size-xxbig {
+  font-size: 2.1875rem;
+  line-height: 1.1; }
+
+.text-size-xbig {
+  font-size: 2.0625rem;
+  line-height: 1.1; }
+
+.text-size-big {
+  font-size: 1.875rem;
+  line-height: 1.1; }
+
+.text-size-large {
+  font-size: 1.75rem;
+  line-height: 1.1; }
+
+.text-size-medium-3 {
+  font-size: 1.625rem;
+  line-height: 1.1; }
+
+.text-size-medium-2 {
+  font-size: 1.25rem;
+  line-height: 1.1; }
+
+.text-size-medium {
+  font-size: 1.125rem;
+  line-height: 1.1; }
+
+.text-size-normal {
+  font-size: 0.875rem;
+  line-height: 1.1; }
+
+.text-size-small {
+  font-size: 0.8125rem;
+  line-height: 1.1; }

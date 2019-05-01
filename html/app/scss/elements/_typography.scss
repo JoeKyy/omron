@@ -1,50 +1,93 @@
-h1 {
+h1,
+.h1 {
+    @include font(bold);
+
     margin-bottom: space(base);
 
     font-size: font-size(xxxbig);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-h2 {
+h2,
+.h2 {
+    @include font(bold);
+
     margin-bottom: space(base);
 
     font-size: font-size(xxbig);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-h3 {
+h3,
+.h3 {
+    @include font(bold);
+
     margin-bottom: space(base);
 
     font-size: font-size(xbig);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-h4 {
+h4,
+.h4 {
+    @include font(bold);
+
     margin-bottom: space(base);
 
-    font-size: font-size(large);
-    line-height: 1.2;
+    font-size: font-size(medium-3);
+    line-height: 1.1;
 }
 
-h5 {
+h5,
+.h5 {
+    @include font(bold);
+
     margin-bottom: space(base);
 
     font-size: font-size(medium);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-h6 {
+h6,
+.h6 {
+    @include font(bold);
+
     margin-bottom: space(base);
 
     font-size: font-size(normal);
-    line-height: 1.2;
+    line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.h1,
+    &.h2,
+    &.h3,
+    &.h4,
+    &.h5,
+    &.h6 {
+        font-weight: 700 !important;
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: inherit;
 }
 
 p {
     margin-bottom: space(base);
 
     font-size: font-size(normal);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 ul {}

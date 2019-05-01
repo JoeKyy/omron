@@ -157,6 +157,10 @@ wp-content/plugins/hello.php
 
 *.zip
 
+### PSD ###
+# General
+psd/
+*.psd
 
 
 # End of https://www.gitignore.io/api/node,sass,macos,windows,wordpress

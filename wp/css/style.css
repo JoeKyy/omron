@@ -55,16 +55,32 @@
 
   .slide button.slick-arrow.slick-prev,
   .rotate button.slick-arrow.slick-prev {
-    margin: auto auto auto 16px;
+    margin: auto auto auto 297.6px;
   }
 }
 
 .slide button.slick-arrow.slick-prev:before,
 .rotate button.slick-arrow.slick-prev:before {
-  content: "\f0d9";
+  content: "<";
   text-indent: inherit;
-  font-size: 2.0625rem;
-  color: #ffffff;
+  font-size: 2.9375rem;
+  color: #55565a;
+}
+
+.slide button.slick-arrow.slick-prev:after,
+.rotate button.slick-arrow.slick-prev:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: auto auto auto -16px;
+  border: 1px solid #55565a;
+  border-radius: 35px;
 }
 
 .slide button.slick-arrow.slick-next,
@@ -78,16 +94,32 @@
 
   .slide button.slick-arrow.slick-next,
   .rotate button.slick-arrow.slick-next {
-    margin: auto 16px auto auto;
+    margin: auto 297.6px auto auto;
   }
 }
 
 .slide button.slick-arrow.slick-next:before,
 .rotate button.slick-arrow.slick-next:before {
-  content: "\f0da";
+  content: ">";
   text-indent: inherit;
-  font-size: 2.0625rem;
-  color: #ffffff;
+  font-size: 2.9375rem;
+  color: #55565a;
+}
+
+.slide button.slick-arrow.slick-next:after,
+.rotate button.slick-arrow.slick-next:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: auto -16px auto auto;
+  border: 1px solid #55565a;
+  border-radius: 35px;
 }
 
 .slick-track {
@@ -779,8 +811,88 @@ body {
     MAIN
 \*------------------------------------*/
 main {
-  margin-top: 120px;
+  margin-top: 55px;
   min-height: calc(100vh - 110px);
+}
+
+@media (min-width: 48.0625em) {
+  main {
+    margin-top: 120px;
+  }
+}
+
+main[role='home'] section.rotate {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+main[role='home'] section.rotate figure {
+  position: relative;
+  background-position: center 50px;
+  background-size: auto 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (min-width: 48.0625em) {
+  main[role='home'] section.rotate figure {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main[role='home'] section.rotate figure:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (min-width: 48.0625em) {
+  main[role='home'] section.rotate figure:before {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+main[role='home'] section.rotate figure img {
+  display: none;
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (min-width: 48.0625em) {
+  main[role='home'] section.rotate figure img {
+    display: block;
+  }
+}
+
+main[role='home'] section.rotate .slick-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto 14px;
+  width: auto;
+  height: 30px;
+  text-align: center;
+}
+
+main[role='home'] section.rotate .slick-dots li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 3px;
+  text-indent: -9999px;
+  background-color: #55565a;
+  border-radius: 50%;
+}
+
+main[role='home'] section.rotate .slick-dots .slick-active {
+  background-color: #0068b7;
 }
 
 main[role='home'] section.vision__content {

@@ -1,6 +1,17 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
-	<main role="home">
+    <main role="home">
+        <section id="rotate" class="rotate">
+            <figure style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/img-highlight-01.png);">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/img-highlight-01.png" alt="" />
+            </figure>
+            <figure style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/img-highlight-02.png);">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/img-highlight-02.png" alt="" />
+            </figure>
+            <figure style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/img-highlight-03.png);">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/img-highlight-03.png" alt="" />
+            </figure>
+        </section>
         <section class="vision__content">
             <div class="container">
                 <div class="row">

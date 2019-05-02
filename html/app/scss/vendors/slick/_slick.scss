@@ -21,30 +21,62 @@
 
             &.slick-prev {
                 @include responsive(medium) {
-                    margin: auto auto auto space(base);
+                    margin: auto auto auto (space(gg) * 6.2);
                 }
                 position: absolute;
                 left: 0;
                 margin: auto auto auto (- space(p));
                 &:before {
-                    content: "\f0d9";
+                    content: "<";
                     text-indent: inherit;
-                    font-size: font-size(xbig);
-                    color: color(light);
+                    font-size: font-size(xxxbig);
+                    color: color(dark, darker);
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    margin: auto auto auto (- space(base));
+
+                    border: 1px solid color(dark, darker);
+                    border-radius: 35px;
                 }
             }
             &.slick-next {
                 @include responsive(medium) {
-                    margin: auto space(base) auto auto;
+                    margin: auto (space(gg) * 6.2) auto auto;
                 }
                 position: absolute;
                 right: 0;
                 margin: auto (- space(p)) auto auto;
                 &:before {
-                    content: "\f0da";
+                    content: ">";
                     text-indent: inherit;
-                    font-size: font-size(xbig);
-                    color: color(light);
+                    font-size: font-size(xxxbig);
+                    color: color(dark, darker);
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    margin: auto (- space(base)) auto auto;
+
+                    border: 1px solid color(dark, darker);
+                    border-radius: 35px;
                 }
             }
         }

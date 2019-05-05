@@ -54,7 +54,7 @@
       .rotate button.slick-arrow.slick-prev:after {
         content: "";
         position: absolute;
-        top: 0;
+        top: 8px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -83,7 +83,7 @@
       .rotate button.slick-arrow.slick-next:after {
         content: "";
         position: absolute;
-        top: 0;
+        top: 8px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -549,17 +549,19 @@ main {
   min-height: calc(100vh - 110px); }
   @media (min-width: 48.0625em) {
     main {
-      margin-top: 120px; } }
+      margin-top: 115px; } }
   main[role='home'] section.rotate {
     position: relative;
     overflow: hidden;
     padding: 0; }
     main[role='home'] section.rotate figure {
       position: relative;
-      background-position: center 50px;
+      background-position: center;
       background-size: auto 100%;
+      background-repeat: no-repeat;
       width: 100vw;
-      height: 100vh; }
+      height: 100vh;
+      min-height: 450px; }
       @media (min-width: 48.0625em) {
         main[role='home'] section.rotate figure {
           width: 100%;
@@ -578,9 +580,6 @@ main {
         display: none;
         max-width: 100%;
         width: 100%; }
-        @media (min-width: 48.0625em) {
-          main[role='home'] section.rotate figure img {
-            display: block; } }
     main[role='home'] section.rotate .slick-dots {
       position: absolute;
       top: 0;
@@ -609,35 +608,62 @@ main {
       width: 150px;
       min-height: 30px;
       margin: 8px auto; }
-    main[role='home'] section.vision__content .icn-01 {
+    main[role='home'] section.vision__content .list-itens div > div:hover {
+      color: #0068b7; }
+      main[role='home'] section.vision__content .list-itens div > div:hover .icn-01 {
+        background-image: url("../images/sprite.png");
+        background-position: -72px -104px;
+        width: 72px;
+        height: 116px; }
+      main[role='home'] section.vision__content .list-itens div > div:hover .icn-02 {
+        background-image: url("../images/sprite.png");
+        background-position: 0px 0px;
+        width: 115px;
+        height: 104px; }
+      main[role='home'] section.vision__content .list-itens div > div:hover .icn-03 {
+        background-image: url("../images/sprite.png");
+        background-position: -302px 0px;
+        width: 54px;
+        height: 87px; }
+      main[role='home'] section.vision__content .list-itens div > div:hover .icn-04 {
+        background-image: url("../images/sprite.png");
+        background-position: 0px -104px;
+        width: 72px;
+        height: 116px; }
+      main[role='home'] section.vision__content .list-itens div > div:hover .icn-05 {
+        background-image: url("../images/sprite.png");
+        background-position: 0px -220px;
+        width: 81px;
+        height: 73px; }
+    main[role='home'] section.vision__content .list-itens .icn-01 {
       background-image: url("../images/sprite.png");
       background-position: -230px 0px;
       width: 72px;
       height: 116px;
       display: block;
       margin: 0 auto; }
-    main[role='home'] section.vision__content .icn-02 {
+    main[role='home'] section.vision__content .list-itens .icn-02 {
       background-image: url("../images/sprite.png");
       background-position: -115px 0px;
       width: 115px;
       height: 104px;
       display: block;
       margin: 0 auto; }
-    main[role='home'] section.vision__content .icn-03 {
+    main[role='home'] section.vision__content .list-itens .icn-03 {
       background-image: url("../images/sprite.png");
       background-position: -230px -116px;
       width: 54px;
       height: 87px;
       display: block;
       margin: 0 auto; }
-    main[role='home'] section.vision__content .icn-04 {
+    main[role='home'] section.vision__content .list-itens .icn-04 {
       background-image: url("../images/sprite.png");
       background-position: -144px -104px;
       width: 72px;
       height: 116px;
       display: block;
       margin: 0 auto; }
-    main[role='home'] section.vision__content .icn-05 {
+    main[role='home'] section.vision__content .list-itens .icn-05 {
       background-image: url("../images/sprite.png");
       background-position: -81px -220px;
       width: 81px;

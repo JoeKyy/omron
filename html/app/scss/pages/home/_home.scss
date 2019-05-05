@@ -14,11 +14,13 @@
 
 				position: relative;
 
-				background-position: center 50px;
+				background-position: center;
 				background-size: auto 100%;
+				background-repeat: no-repeat;
 
 				width: 100vw;
 				height: 100vh;
+				min-height: 450px;
 
 				&:before {
 					@include responsive(medium) {
@@ -36,7 +38,7 @@
 
 				img {
 					@include responsive(medium) {
-						display: block;
+						// display: block;
 					}
 
 					display: none;
@@ -141,41 +143,67 @@
 						min-height: 30px;
 						margin: space(p) auto;
 					}
-				}
 
-				.icn-01 {
-					@include sprite($icn-01);
+					div > div {
+						&:hover {
+							color: color(primary);
 
-					display: block;
-					margin: 0 auto;
-				}
+							.icn-01 {
+								@include sprite($icn-01--hover);
+							}
 
-				.icn-02 {
-					@include sprite($icn-02);
+							.icn-02 {
+								@include sprite($icn-02--hover);
+							}
 
-					display: block;
-					margin: 0 auto;
-				}
+							.icn-03 {
+								@include sprite($icn-03--hover);
+							}
 
-				.icn-03 {
-					@include sprite($icn-03);
+							.icn-04 {
+								@include sprite($icn-04--hover);
+							}
 
-					display: block;
-					margin: 0 auto;
-				}
+							.icn-05 {
+								@include sprite($icn-05--hover);
+							}
+						}
+					}
 
-				.icn-04 {
-					@include sprite($icn-04);
+					.icn-01 {
+						@include sprite($icn-01);
 
-					display: block;
-					margin: 0 auto;
-				}
+						display: block;
+						margin: 0 auto;
+					}
 
-				.icn-05 {
-					@include sprite($icn-05);
+					.icn-02 {
+						@include sprite($icn-02);
 
-					display: block;
-					margin: 0 auto;
+						display: block;
+						margin: 0 auto;
+					}
+
+					.icn-03 {
+						@include sprite($icn-03);
+
+						display: block;
+						margin: 0 auto;
+					}
+
+					.icn-04 {
+						@include sprite($icn-04);
+
+						display: block;
+						margin: 0 auto;
+					}
+
+					.icn-05 {
+						@include sprite($icn-05);
+
+						display: block;
+						margin: 0 auto;
+					}
 				}
 			}
 		}

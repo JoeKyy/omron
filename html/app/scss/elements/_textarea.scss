@@ -1,1 +1,19 @@
-textarea {}
+textarea {
+    @include font(base);
+
+    display: block;
+    width: 100%;
+    padding: space(p) space(m);
+
+    font-size: font-size(medium-2);
+
+    background: {
+        color: color(light, darken);
+    }
+
+    border: none;
+    border-radius: inherit;
+    
+    -webkit-appearance: none;
+			appearance: none;
+}

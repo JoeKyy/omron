@@ -280,16 +280,59 @@ strong {
 /*------------------------------------*\
     INPUT
 \*------------------------------------*/
+label {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 1.25rem; }
+
 input {
   font-family: Montserrat;
-  font-weight: 700; }
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  height: 77px;
+  padding: 0 24px;
+  font-size: 1.25rem;
+  background-color: #e2e3e3;
+  border: none;
+  border-radius: inherit; }
 
 /*------------------------------------*\
     TEXTAREA
 \*------------------------------------*/
+textarea {
+  font-family: Montserrat;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 8px 24px;
+  font-size: 1.25rem;
+  background-color: #e2e3e3;
+  border: none;
+  border-radius: inherit;
+  -webkit-appearance: none;
+  appearance: none; }
+
 /*------------------------------------*\
     SELECT
 \*------------------------------------*/
+select {
+  font-family: Montserrat;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  height: 77px;
+  padding: 0 24px;
+  font-size: 1.25rem;
+  background-color: #e2e3e3;
+  background-image: url(../images/arrow-down.png);
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: inherit;
+  -webkit-appearance: none;
+  appearance: none; }
+
 /*------------------------------------*\
     BUTTONS
 \*------------------------------------*/
@@ -710,7 +753,7 @@ main {
     align-content: center;
     width: 100%;
     min-height: 525px;
-    background-image: url(../images/img-header_quemsomos.png);
+    background-image: url(../images/img-header_basic.png);
     background-color: #959595;
     background-position: center;
     background-repeat: no-repeat;

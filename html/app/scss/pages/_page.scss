@@ -1,65 +1,53 @@
 &[role='page'] {
-	> header {
-		display: flex;
-		align-content: center;
-
-		width: 100%;
-		min-height: 525px;
-
-		background: {
-			image: url(../images/img-header_quemsomos.png);
-			color: color(dark, darken);
-			position: center;
-			repeat: no-repeat;
-			size: cover;
-		}
-
-		.container {
-			position: relative;
-
-			display: flex;
-			align-content: center;
-
-			& > div {
-				display: flex;
-				align-content: center;
-
-				> * {
-					display: flex;
-					align-self: center;
-
-					font-size: (font-size(xxxbig) + .3125);
-					text-transform: uppercase;
-				}
-			}
-		}
-	}
-	article {
-		min-height: calc(100vh - 525px);
-		padding: space(gg) 0;
-
-		h3 {
-			margin-top: space(gg);
-		}
-
-		p {
-			margin-bottom: space(g);
-			font-size: font-size(medium-2);
-		}
-
-		dl {
-			font-size: font-size(medium-2);
-
-			dd {
-				margin-bottom: space(g);
-			}
-		}
-	}
-	> footer {
-		padding: space(gg) 0;
-
-		background: {
-			color: color(light, darken);
-		}
-	}
+    >header {
+        display: flex;
+        align-content: center;
+        width: 100%;
+        min-height: 525px;
+        background: {
+            image: url(../images/img-header_basic.png);
+            color: color(dark, darken);
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            align-content: center;
+            &>div {
+                display: flex;
+                align-content: center;
+                >* {
+                    display: flex;
+                    align-self: center;
+                    font-size: (font-size(xxxbig) + .3125);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    article {
+        min-height: calc(100vh - 525px);
+        padding: space(gg) 0;
+        h3 {
+            margin-top: space(gg);
+        }
+        p {
+            margin-bottom: space(g);
+            font-size: font-size(medium-2);
+        }
+        dl {
+            font-size: font-size(medium-2);
+            dd {
+                margin-bottom: space(g);
+            }
+        }
+    }
+    >footer {
+        padding: space(gg) 0;
+        background: {
+            color: color(light, darken);
+        }
+    }
 }

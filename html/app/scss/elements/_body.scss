@@ -1,6 +1,8 @@
 html {
     @include font(base, $fallback: true);
-
+    @include responsive(medium, max) {
+        font-size: (font-size(small, $rem: false));
+    }
     font-size: (font-size(normal, $rem: false) + 2);
 }
 

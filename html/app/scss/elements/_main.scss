@@ -1,10 +1,11 @@
 main {
-	@include responsive(medium) {
+	@include responsive(large) {
 		margin-top: 115px;
 	}
 
 	margin-top: 55px;
 	min-height: calc(100vh - 110px);
 
-	@import "../pages/home/home";
+	@import "../pages/home";
+	@import "../pages/page";
 }

@@ -2,21 +2,21 @@ $(function () {
 	$(".botao-menu").on('click', function (e) {
 		if (!$(this).hasClass("open")) {
 			$(this).addClass("open");
-			$('header .header__menuContent').addClass("open");
+			$('body > header .header__menuContent').addClass("open");
 		} else {
 			$(this).removeClass("open");
-			$('header .header__menuContent').removeClass("open");
+			$('body > header .header__menuContent').removeClass("open");
 		}
 	});
 
 	$(document).scroll(function () {
 		if ($(window).scrollTop() > 50) {
 
-			$("header").removeClass('header--opacity');
+			$("body > header").removeClass('header--opacity');
 
 		} else if ($(window).scrollTop() < 50) {
 
-			$("header").addClass('header--opacity');
+			$("body > header").addClass('header--opacity');
 
 		}
 	});

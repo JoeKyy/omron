@@ -130,6 +130,70 @@ label {
     background-color: color(dark, darken);
 }
 
+
+
+.text--primary-darker {
+    color: color(primary, darker);
+}
+
+.text--primary-dark {
+    color: color(primary, dark);
+}
+
+.text--primary-base {
+    color: color(primary);
+}
+
+.text--primary-lightest {
+    color: color(primary, lightest);
+}
+
+.text--primary-lighter {
+    color: color(primary, lighter);
+}
+
+.text--primary-light {
+    color: color(primary, light);
+}
+
+.text--light-base {
+    color: color(light);
+}
+
+.text--light-lighten {
+    color: color(light, lighten);
+}
+
+.text--light-lighter {
+    color: color(light, lighter);
+}
+
+.text--light-very-light {
+    color: color(light, very-light);
+}
+
+.text--light-lightest {
+    color: color(light, lightest);
+}
+
+.text--dark-base {
+    color: color(dark);
+}
+
+.text--dark-darkest {
+    color: color(dark, darkest);
+}
+
+.text--dark-darker {
+    color: color(dark, darker);
+}
+
+.text--dark-darken {
+    color: color(dark, darken);
+}
+
+
+
 .text-size-xxxbig {
     font-size: font-size(xxxbig);
     line-height: 1.1;

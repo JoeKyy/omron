@@ -1,119 +1,119 @@
-footer {
-	$self: &;
-
-	.h4 {
-		@include responsive(large) {
-			text-align: left;
-		}
-
-		text-align: center;
-
-		font-weight: 100
-	}
-
-	.#{ $self }__menu {
-		min-height: 210px;
-		padding: 60px 0;
-
-		background: color(dark);
-		color: color(light);
-
-		h6 {
-			position: relative;
-
-			margin-bottom: space(p);
-
-			&:before {
-				content: "";
-
-				position: absolute;
-				bottom: -5px;
-
-				display: block;
-				width: 100%;
-				height: 1px;
-
-				background: color(light);
-			}
-		}
-	}
-
-	.#{ $self }__bottom-menu {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 65px;
-
-		background: color(light);
-
-		ul {
+body {
+	> footer {
+		.h4 {
 			@include responsive(large) {
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				text-align: left;
 			}
 
-			li {
+			text-align: center;
+
+			font-weight: 100
+		}
+
+		.footer__menu {
+			min-height: 210px;
+			padding: 60px 0;
+
+			background: color(dark);
+			color: color(light);
+
+			h6 {
+				position: relative;
+
+				margin-bottom: space(p);
+
+				&:before {
+					content: "";
+
+					position: absolute;
+					bottom: -5px;
+
+					display: block;
+					width: 100%;
+					height: 1px;
+
+					background: color(light);
+				}
+			}
+		}
+
+		.footer__bottom-menu {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 65px;
+
+			background: color(light);
+
+			ul {
 				@include responsive(large) {
-					margin: 0 space(p);
-					text-align: inherit
+					display: flex;
+					align-items: center;
+					justify-content: center;
 				}
 
-				margin: space(p);
+				li {
+					@include responsive(large) {
+						margin: 0 space(p);
+						text-align: inherit
+					}
 
-				color: color(dark, darken);
-				text-align: center;
+					margin: space(p);
 
-				a {
 					color: color(dark, darken);
+					text-align: center;
+
+					a {
+						color: color(dark, darken);
+					}
 				}
 			}
 		}
-	}
 
-	.#{ $self }__logo {
-		@include sprite($lgo-omron);
-		@include hidden-text();
+		.footer__logo {
+			@include sprite($lgo-omron);
+			@include hidden-text();
 
-		@include responsive(large) {
-			margin: 0 0 0 auto;
+			@include responsive(large) {
+				margin: 0 0 0 auto;
+			}
+
+			position: relative;
+			z-index: 2;
+
+			margin: 0 auto;
+
+			transform: scale(1.3);
+
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
 		}
 
-		position: relative;
-		z-index: 2;
+		.footer__tecnologia_japonesa {
+			@include sprite($icn-tecnologia_japonesa);
+			@include hidden-text();
+			@include responsive(large) {
+				margin: 0 0 0 auto;
+			}
 
-		margin: 0 auto;
+			position: relative;
+			z-index: 2;
 
-		transform: scale(1.3);
+			display: block;
+			margin: space(g) auto;
 
-		a {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-	}
-
-	.#{ $self }__tecnologia_japonesa {
-		@include sprite($icn-tecnologia_japonesa);
-		@include hidden-text();
-		@include responsive(large) {
-			margin: 0 0 0 auto;
-		}
-
-		position: relative;
-		z-index: 2;
-
-		display: block;
-		margin: space(g) auto;
-
-		a {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
+			a {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 }

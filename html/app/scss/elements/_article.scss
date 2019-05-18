@@ -1,1 +1,43 @@
-article {}
+article {
+	.alignnone {
+		margin: 0;
+	}
+
+	.aligncenter {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.alignright {
+		float: right;
+		margin: space(base) 0 space(base) space(base);
+	}
+
+	.alignleft {
+		float: left;
+		margin: space(base) space(base) space(base) 0;
+	}
+
+	.wp-caption {
+		max-width: 95%;
+		padding: space(base);
+
+		text-align: center;
+
+		background: color(dark, darker);
+		border: thin solid color(dark, darken);
+
+		& img {
+			width: auto;
+			max-width: 98.5%;
+			height: auto;
+			border: 0 none;
+		}
+	}
+
+	.wp-caption .wp-caption-text,
+	.gallery-caption {
+		margin: 0;
+		padding: 0;
+	}
+}

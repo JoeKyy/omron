@@ -11,12 +11,10 @@
 	License URI: http://opensource.org/licenses/mit-license.php
 */
 
-
 @charset 'UTF-8';
 // @section  Settings [configurações]
 @import "./config";
 @import './sprite';
-
 // @section  Tools [ferramentas]
 @import './tools/functions/get-maps';
 @import './tools/functions/clean-unit';
@@ -47,7 +45,6 @@
 \*------------------------------------*/
 
 @import "./generics/reset";
-
 // @section  Elements [elementos]
 
 /*------------------------------------*\
@@ -115,7 +112,6 @@
 \*------------------------------------*/
 
 @import "./elements/footer";
-
 // @section  Objects [objetos]
 // @section  Components [componentes]
 // @section  Pages

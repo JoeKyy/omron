@@ -765,7 +765,32 @@ main {
       main[role='page'] > header .container > div {
         display: flex;
         align-content: center; }
-        main[role='page'] > header .container > div > * {
+        main[role='page'] > header .container > div h1 {
+          display: flex;
+          align-self: center;
+          font-size: 3.25rem;
+          text-transform: uppercase; }
+        main[role='page'] > header .container > div h2 {
+          display: flex;
+          align-self: center;
+          font-size: 3.25rem;
+          text-transform: uppercase; }
+        main[role='page'] > header .container > div h3 {
+          display: flex;
+          align-self: center;
+          font-size: 3.25rem;
+          text-transform: uppercase; }
+        main[role='page'] > header .container > div h4 {
+          display: flex;
+          align-self: center;
+          font-size: 3.25rem;
+          text-transform: uppercase; }
+        main[role='page'] > header .container > div h5 {
+          display: flex;
+          align-self: center;
+          font-size: 3.25rem;
+          text-transform: uppercase; }
+        main[role='page'] > header .container > div h6 {
           display: flex;
           align-self: center;
           font-size: 3.25rem;
@@ -785,6 +810,43 @@ main {
   main[role='page'] > footer {
     padding: 48px 0;
     background-color: #e2e3e3; }
+  main[role='page'].loop nav {
+    margin: 48px 0; }
+    main[role='page'].loop nav ul {
+      display: none;
+      justify-content: center;
+      align-content: space-between; }
+      @media (min-width: 64.0625em) {
+        main[role='page'].loop nav ul {
+          display: flex; } }
+      main[role='page'].loop nav ul li {
+        margin: 0 56px;
+        font-size: 1.875rem;
+        color: #55565a; }
+        main[role='page'].loop nav ul li a:hover, main[role='page'].loop nav ul li a.selected {
+          font-family: Montserrat;
+          font-weight: 700;
+          color: #000000; }
+    main[role='page'].loop nav select {
+      width: 90%;
+      margin: 0 auto; }
+      @media (min-width: 64.0625em) {
+        main[role='page'].loop nav select {
+          display: none; } }
+  main[role='page'].loop article img {
+    width: 100%;
+    margin: 0 0 16px; }
+    @media (min-width: 64.0625em) {
+      main[role='page'].loop article img {
+        margin: 0 0 48px; } }
+  main[role='page'].loop article h3 {
+    margin-top: 0;
+    font-size: 2.1875rem;
+    line-height: 1.2; }
+  main[role='page'].loop article p {
+    color: #55565a;
+    font-size: 1.4625rem;
+    line-height: 1.2; }
 
 /*------------------------------------*\
     SECTION

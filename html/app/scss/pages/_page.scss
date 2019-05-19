@@ -18,11 +18,13 @@
             &>div {
                 display: flex;
                 align-content: center;
-                >* {
-                    display: flex;
-                    align-self: center;
-                    font-size: (font-size(xxxbig) + .3125);
-                    text-transform: uppercase;
+                @for $index from 1 through 6 {
+                    h#{$index}{
+                        display: flex;
+                        align-self: center;
+                        font-size: (font-size(xxxbig) + .3125);
+                        text-transform: uppercase;
+                    }
                 }
             }
         }

@@ -32,4 +32,9 @@ $(function () {
 	$(window).on('resize orientationchange', function () {
 		$('.slide').slick('resize');
 	});
+
+	$("main[role='page'].loop nav select").change(function() {
+		window.location = $(this).find("option:selected").val();
+	});
+
 });

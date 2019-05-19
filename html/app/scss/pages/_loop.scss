@@ -1,0 +1,68 @@
+&[role='page'].loop {
+    >header {
+    }
+
+    nav {
+        margin: space(gg) 0;
+                
+        ul {
+            @include responsive(large) {
+                display: flex;
+            }
+
+            display: none;
+            justify-content: center;
+            align-content: space-between;
+
+
+            li {
+                margin: 0 space(xg);
+
+                font-size: font-size(big);
+                color: color(dark, darker);
+
+                a {
+                    &:hover,
+                    &.selected {
+                        @include font(bold);
+
+                        color: color(dark);
+                    }
+                }
+            }
+        }
+
+        select {    
+            @include responsive(large) {
+                display: none;
+            }            
+
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    article {
+        img {
+            @include responsive(large) {
+                margin: 0 0 space(gg);
+            }
+
+            width: 100%;
+            margin: 0 0 space(base);
+            
+        }
+        h3 {
+            margin-top: 0;
+
+            font-size: font-size(xxbig);
+            line-height: 1.2;
+        }
+
+        p {
+            color: color(dark, darker); 
+            font-size: (font-size(medium-2) * 1.17);
+            line-height: 1.2;
+        }
+    }
+}

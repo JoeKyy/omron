@@ -280,6 +280,20 @@ strong {
 /*------------------------------------*\
     INPUT
 \*------------------------------------*/
+form fieldset {
+  position: relative;
+  margin: 56px 0;
+  padding: 84px 32px 32px;
+  border: 1px solid #000000; }
+  form fieldset legend {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    padding: 0 32px; }
+
+/*------------------------------------*\
+    INPUT
+\*------------------------------------*/
 label {
   font-family: Montserrat;
   font-weight: 700;
@@ -1087,41 +1101,41 @@ label {
   color: #959595; }
 
 .text-size-xxxbig {
-  font-size: 2.9375rem;
+  font-size: 2.9375rem !important;
   line-height: 1.1; }
 
 .text-size-xxbig {
-  font-size: 2.1875rem;
+  font-size: 2.1875rem !important;
   line-height: 1.1; }
 
 .text-size-xbig {
-  font-size: 2.0625rem;
+  font-size: 2.0625rem !important;
   line-height: 1.1; }
 
 .text-size-big {
-  font-size: 1.875rem;
+  font-size: 1.875rem !important;
   line-height: 1.1; }
 
 .text-size-large {
-  font-size: 1.75rem;
+  font-size: 1.75rem !important;
   line-height: 1.1; }
 
 .text-size-medium-3 {
-  font-size: 1.625rem;
+  font-size: 1.625rem !important;
   line-height: 1.1; }
 
 .text-size-medium-2 {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
   line-height: 1.1; }
 
 .text-size-medium {
-  font-size: 1.125rem;
+  font-size: 1.125rem !important;
   line-height: 1.1; }
 
 .text-size-normal {
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
   line-height: 1.1; }
 
 .text-size-small {
-  font-size: 0.8125rem;
+  font-size: 0.8125rem !important;
   line-height: 1.1; }

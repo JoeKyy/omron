@@ -1083,6 +1083,32 @@ body > footer .footer__tecnologia_japonesa {
           font-size: 0.875rem;
           color: #0068b7; }
 
+.accordion .card {
+  background-color: inherit;
+  border: none; }
+  .accordion .card-header {
+    padding: 8px 0;
+    background-color: inherit;
+    border: none; }
+    .accordion .card-header p {
+      display: flex;
+      align-content: center; }
+      .accordion .card-header p:after {
+        content: "";
+        display: inline-block;
+        margin: 0 0 0 24px;
+        width: 45px;
+        height: 20px;
+        background-color: inherit;
+        background-image: url(../images/arrow-down.png);
+        background-repeat: no-repeat;
+        background-position: right 50%;
+        filter: grayscale(10); }
+  .accordion .card-body {
+    padding: 8px 0;
+    background-color: inherit;
+    border: none; }
+
 /*------------------------------------*\
     HELPERS
 \*------------------------------------*/

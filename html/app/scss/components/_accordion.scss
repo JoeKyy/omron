@@ -1,0 +1,41 @@
+.accordion {
+    .card {
+        background-color: inherit;
+        border: none;
+
+        &-header {
+            padding: space(p) 0;
+            background-color: inherit;
+            border: none;
+            p {
+                display: flex;
+                align-content: center;
+
+                &:after {
+                    content: "";
+
+                    display: inline-block;
+                    margin: 0 0 0 space(m);
+                    width: 45px;
+                    height: 20px;
+
+                    background: {
+                        color: inherit;
+                        image: url(../images/arrow-down.png);
+                        repeat: no-repeat;
+                        position: right 50%;
+                    }
+
+                    filter: grayscale(10);
+                }
+            }
+        }
+
+        &-body {
+            padding: space(p) 0;
+
+            background-color: inherit;
+            border: none;
+        }
+    }
+}

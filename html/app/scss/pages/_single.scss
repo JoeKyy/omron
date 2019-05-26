@@ -1,0 +1,131 @@
+&[role='single'] {
+    >header {
+        display: flex;
+        align-content: center;
+        width: 100%;
+        figure {
+            position: relative;
+
+            max-width: 100%;
+            width: 100%;
+
+            picture {
+                max-width: 100%;
+                width: 100%;
+
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            figcaption {
+                @include responsive(large) {
+                    max-width: 1140px;
+                }
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                display: flex;
+                align-items: center;
+
+                margin: 0 auto;
+
+                h2 {
+                    @include responsive(large, max) {
+                        margin-left: space(m) * 2
+                    }
+
+                    @include responsive(small, max) {
+                        margin-left: space(m);
+
+                        font-size: (font-size(big));
+                    }
+
+                    max-width: 50%;
+                    margin: 0;
+
+                    font-size: (font-size(xxxbig) + .3125);
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .container {
+            position: relative;
+            display: flex;
+            align-content: center;
+            &>div {
+                display: flex;
+                align-content: center;
+                &>div {
+                    display: flex;
+                    align-self: center;
+
+                    @for $index from 1 through 6 {
+                        h#{$index}{
+                            display: flex;
+                            align-self: center;
+                            font-size: (font-size(xxxbig) + .3125);
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    article {
+        min-height: calc(100vh - 525px);
+        padding: space(base) 0 space(gg);
+
+        header,
+        footer {
+            margin: space(gg) 0 space(m);
+        }
+
+        p {
+            margin-bottom: space(g);
+            font-size: font-size(medium-2);
+        }
+
+        dl,
+        ul,
+        ol {
+            font-size: font-size(medium-2);
+            dd,
+            li {
+                margin-bottom: space(base);
+            }
+        }
+
+        ul {
+            padding-left: space(m);
+
+            li {
+                list-style: disc;
+            }
+        }
+
+        ol {
+            padding-left: space(m);
+
+            li {
+                list-style: decimal;
+            }
+        }
+
+        blockquote {
+            footer {
+                margin: inherit
+            }
+        }
+    }
+    >footer {
+        padding: space(gg) 0;
+        background: {
+            color: color(light, darken);
+        }
+    }
+}

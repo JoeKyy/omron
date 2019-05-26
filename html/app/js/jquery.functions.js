@@ -9,21 +9,39 @@ $(function () {
 		}
 	});
 
-	$(document).scroll(function () {
-		if ($(window).scrollTop() > 50) {
+	var windowsize = $(window).width();
 
-			$("body > header").removeClass('header--opacity');
+	windowsize = $(window).width();
+	if (windowsize <= 1024) {
+		$('body>header .header__menu nav ul>li > ul').parent().addClass('parent-menu')
+		$('.parent-menu .sub-menu').hide();
+	} else {
+		$('body>header .header__menu nav ul>li > ul').parent().removeClass('parent-menu')
+		$('.parent-menu .sub-menu').show();
+	}
 
-		} else if ($(window).scrollTop() < 50) {
-
-			$("body > header").addClass('header--opacity');
-
+	$(".parent-menu").on('click', function (e) {
+		e.preventDefault();
+		if (!$(this).hasClass("open")) {
+			$(this).addClass("open");
+			$(this).find('.sub-menu').show();
+		} else {
+			$(this).removeClass("open");
+			$('.parent-menu .sub-menu').hide();
 		}
 	});
 
 	$('.rotate').slick({
 		dots: true,
-		infinite: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
+
+	$('.slide').slick({
+		dots: false,
+		infinite: true,
 		speed: 300,
 		slidesToShow: 1,
 		slidesToScroll: 1,

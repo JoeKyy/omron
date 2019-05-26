@@ -45,7 +45,7 @@ body {
 						display: flex;
 						align-items: center;
 						justify-content: flex-end;
-						height: 50px;
+						height: 35px;
 					}
 
 					justify-content: flex-start;
@@ -102,7 +102,7 @@ body {
 							margin: 0 space(p);
 						}
 
-						margin: 0 space(base);
+						margin: space(p) space(base);
 
 						font-size: font-size(medium);
 
@@ -186,6 +186,100 @@ body {
 									margin-left: space(s);
 
 									font-size: font-size(small);
+								}
+							}
+						}
+
+						&.parent-menu {
+							position: relative;
+
+							&:before {
+								@include responsive(large) {
+									display: none;
+								}
+
+								content: "";
+
+								position: absolute;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+
+								width: 0;
+								height: 0;
+								margin: auto 0 auto auto;
+
+								border-top: 10px solid transparent;
+								border-bottom: 10px solid transparent;
+								border-left: 10px solid color(light);
+							}
+
+							&:after {
+								@include responsive(large) {
+									display: none;
+								}
+
+								content: "";
+
+								position: absolute;
+								top: 0;
+								left: 0;
+								right: 0;
+								bottom: 0;
+
+								width: 0;
+								height: 0;
+								margin: auto 1px auto auto;
+
+								border-top: 10px solid transparent;
+								border-bottom: 10px solid transparent;
+								border-left: 10px solid color(dark);
+							}
+
+							&.open {
+								&:before {
+									@include responsive(large) {
+										display: none;
+									}
+
+									content: "";
+
+									position: absolute;
+									top: 0;
+									left: 0;
+									right: 0;
+									bottom: 0;
+
+									width: 0;
+									height: 0;
+									margin: 4px 0 auto auto;
+
+									border-left: 10px solid transparent;
+									border-right: 10px solid transparent;
+									border-top: 10px solid color(light);
+								}
+
+								&:after {
+									@include responsive(large) {
+										display: none;
+									}
+
+									content: "";
+
+									position: absolute;
+									top: 0;
+									left: 0;
+									right: 0;
+									bottom: 0;
+
+									width: 0;
+									height: 0;
+									margin: 3px 0 auto auto;
+
+									border-left: 10px solid transparent;
+									border-right: 10px solid transparent;
+									border-top: 10px solid color(dark);
 								}
 							}
 						}
@@ -284,8 +378,11 @@ body {
 							}
 
 							i {
+								@include responsive(large) {
+									top: 2px;
+								}
 								position: relative;
-								top: 2px;
+								top: 5px;
 							}
 						}
 					}

@@ -65,4 +65,49 @@
             }
         }
     }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            div {
+                margin: space(base) (- space(p));
+                padding: space(g) space(g) space(p);
+
+                background-color: lighten(color(light, darken), 5%);
+
+                p {
+                    &:first-child {
+                        @include font(bold);
+
+                        font-size: font-size(medium-3)
+                    }
+
+                    &:nth-child(2) {
+                        font-size: font-size(normal);
+                    }
+
+                    &:nth-child(3) {
+                        @include font(bold);
+
+                        margin-bottom: space(base);
+
+                        font-size: font-size(medium)
+                    }
+                }
+
+                hr {
+                    width: 100%;
+                    margin-bottom: space(base);
+
+                    border-top: 1px solid color(dark, darker);
+
+                    + p {
+                        font-size: font-size(normal);
+                        color: color(primary, base)
+                    }
+                }
+            }
+        }
+    }
 }

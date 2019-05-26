@@ -1,12 +1,13 @@
 main {
 	@include responsive(large) {
-		margin-top: 115px;
+		margin-top: 100px;
 	}
 
 	margin-top: 55px;
 	min-height: calc(100vh - 110px);
 
 	@import "../pages/home";
+	@import "../pages/single";
 	@import "../pages/page";
 	@import "../pages/loop";
 }

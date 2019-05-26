@@ -17,7 +17,16 @@ select {
 
     border: none;
     border-radius: inherit;
-    
+
     -webkit-appearance: none;
-			appearance: none;
+            appearance: none;
+
+    &.round-black {
+        background: {
+            color: color(dark);
+        }
+
+        border: 1px solid color(light);
+        border-radius: 30px;
+    }
 }

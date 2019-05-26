@@ -3,13 +3,59 @@
         display: flex;
         align-content: center;
         width: 100%;
-        min-height: 525px;
-        background: {
-            image: url(../images/img-header_basic.png);
-            color: color(dark, darken);
-            position: center;
-            repeat: no-repeat;
-            size: cover;
+        figure {
+            position: relative;
+
+            max-width: 100%;
+            width: 100%;
+
+            picture {
+                max-width: 100%;
+                width: 100%;
+
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            figcaption {
+                @include responsive(large) {
+                    max-width: 1140px;
+                }
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                display: flex;
+                align-items: center;
+
+                margin: 0 auto;
+
+                h2 {
+                    @include responsive(large, max) {
+                        max-width: 25%;
+                        margin-left: space(m) * 2;
+
+                        font-size: (font-size(big));
+                    }
+
+                    @include responsive(small, max) {
+                        max-width: 35%;
+                        margin-left: space(m);
+
+                        font-size: (font-size(medium-2));
+                    }
+
+                    max-width: 35%;
+                    margin: 0;
+
+                    font-size: (font-size(xxbig));
+                    text-transform: uppercase;
+                }
+            }
         }
         .container {
             position: relative;
@@ -18,12 +64,17 @@
             &>div {
                 display: flex;
                 align-content: center;
-                @for $index from 1 through 6 {
-                    h#{$index}{
-                        display: flex;
-                        align-self: center;
-                        font-size: (font-size(xxxbig) + .3125);
-                        text-transform: uppercase;
+                &>div {
+                    display: flex;
+                    align-self: center;
+
+                    @for $index from 1 through 6 {
+                        h#{$index}{
+                            display: flex;
+                            align-self: center;
+                            font-size: (font-size(xxxbig) + .3125);
+                            text-transform: uppercase;
+                        }
                     }
                 }
             }

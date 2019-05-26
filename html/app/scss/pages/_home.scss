@@ -17,34 +17,26 @@
 				background-position: center;
 				background-size: auto 100%;
 				background-repeat: no-repeat;
+				background-color: color(dark);
 
 				width: 100vw;
-				height: 100vh;
-				min-height: 450px;
 
-				&:before {
-					@include responsive(medium) {
-						width: 100%;
-						height: 100%;
-					}
+				// &:before {
+				// 	@include responsive(medium) {
+				// 		width: 100%;
+				// 		height: 100%;
+				// 	}
 
-					content: "";
-					position: absolute;
-					z-index: 10;
+				// 	content: "";
+				// 	position: absolute;
+				// 	z-index: 10;
 
-					width: 100vw;
-					height: 100vh;
-				}
+				// 	width: 100vw;
+				// 	height: 100vh;
+				// }
 
 				img {
-					@include responsive(medium) {
-						// display: block;
-					}
-
-					display: none;
-					max-width: 100%;
-					width: 100%;
-
+					margin: 0 auto;
 				}
 
 				// figcaption {
@@ -99,18 +91,110 @@
 				// }
 			}
 
+			button {
+				outline: none;
+
+				&.slick-arrow {
+					position: absolute;
+					z-index: 10;
+					top: 0;
+					bottom: 0;
+					background: inherit;
+					font-family: FontAwesome;
+					text-rendering: auto;
+					font-size: 0;
+					border: 0;
+					cursor: pointer;
+
+					@include responsive (large, max) {
+						top: -5vh;
+					}
+
+					&.slick-prev {
+						@include responsive(medium) {
+							margin: auto auto auto (space(gg) * 4);
+							transform: scale(1);
+						}
+						position: absolute;
+						left: 0;
+						margin: auto auto auto (- space(p));
+						transform: scale(.5);
+						&:before {
+							content: "<";
+							text-indent: inherit;
+							font-size: font-size(xxxbig);
+							color: color(dark, darker);
+						}
+						&:after {
+							content: "";
+							position: absolute;
+							top: 8px;
+							left: 0;
+							right: 0;
+							bottom: 0;
+
+							display: block;
+							width: 60px;
+							height: 60px;
+							margin: auto auto auto (- space(base));
+
+							border: 1px solid color(dark, darker);
+							border-radius: 35px;
+						}
+					}
+					&.slick-next {
+						@include responsive(medium) {
+							margin: auto (space(gg) * 4) auto auto;
+							transform: scale(1);
+						}
+						position: absolute;
+						right: 0;
+						margin: auto (- space(p)) auto auto;
+						transform: scale(.5);
+						&:before {
+							content: ">";
+							text-indent: inherit;
+							font-size: font-size(xxxbig);
+							color: color(dark, darker);
+						}
+						&:after {
+							content: "";
+							position: absolute;
+							top: 8px;
+							left: 0;
+							right: 0;
+							bottom: 0;
+
+							display: block;
+							width: 60px;
+							height: 60px;
+							margin: auto (- space(base)) auto auto;
+
+							border: 1px solid color(dark, darker);
+							border-radius: 35px;
+						}
+					}
+				}
+			}
+
 			.slick-dots {
+				@include responsive(medium) {
+					transform: scale(1);
+					margin: auto auto (space(base) - 2);
+                }
 				position: absolute;
 				top: 0;
 				left: 0;
 				right: 0;
 				bottom: 0;
 
-				margin: auto auto (space(base) - 2);
+				margin: auto auto 0;
 				width: auto;
 				height: 30px;
 
 				text-align: center;
+
+				transform: scale(.5);
 
 				li {
 					display: inline-block;
@@ -138,6 +222,11 @@
 				background-color: color(light, darken);
 
 				.list-itens {
+					a {
+						&:hover {
+							text-decoration: none;
+						}
+					}
 					p {
 						width: 150px;
 						min-height: 30px;
@@ -263,6 +352,12 @@
 				padding: space(gg) 0;
 
 				background-color: color(light, darken);
+
+				input {
+					height: calc(2.875rem + 2px);
+
+					background-color: color(light);
+				}
 			}
 		}
 	}

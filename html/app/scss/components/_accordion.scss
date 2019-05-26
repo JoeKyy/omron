@@ -12,6 +12,12 @@
                 align-content: center;
 
                 &:after {
+                    @include responsive(small, max) {
+                        background: {
+                            position: 0;
+                        }
+                    }
+
                     content: "";
 
                     display: inline-block;

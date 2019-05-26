@@ -1,5 +1,4 @@
-.slide,
-.rotate {
+.slide {
     button {
         outline: none;
 
@@ -9,7 +8,6 @@
             top: 0;
             bottom: 0;
             background: inherit;
-            font-family: FontAwesome;
             text-rendering: auto;
             font-size: 0;
             border: 0;
@@ -20,63 +18,47 @@
             }
 
             &.slick-prev {
-                @include responsive(medium) {
-                    margin: auto auto auto (space(gg) * 6.2);
-                }
                 position: absolute;
                 left: 0;
                 margin: auto auto auto (- space(p));
                 &:before {
-                    content: "<";
-                    text-indent: inherit;
-                    font-size: font-size(xxxbig);
-                    color: color(dark, darker);
-                }
-                &:after {
                     content: "";
+
                     position: absolute;
-                    top: 8px;
+                    top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
 
-                    display: block;
-                    width: 60px;
-                    height: 60px;
-                    margin: auto auto auto (- space(base));
+                    width: 0;
+                    height: 0;
+                    margin: auto 0 auto auto;
 
-                    border: 1px solid color(dark, darker);
-                    border-radius: 35px;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-right: 10px solid color(light);
                 }
             }
             &.slick-next {
-                @include responsive(medium) {
-                    margin: auto (space(gg) * 6.2) auto auto;
-                }
                 position: absolute;
                 right: 0;
                 margin: auto (- space(p)) auto auto;
                 &:before {
-                    content: ">";
-                    text-indent: inherit;
-                    font-size: font-size(xxxbig);
-                    color: color(dark, darker);
-                }
-                &:after {
                     content: "";
+
                     position: absolute;
-                    top: 8px;
+                    top: 0;
                     left: 0;
                     right: 0;
                     bottom: 0;
 
-                    display: block;
-                    width: 60px;
-                    height: 60px;
-                    margin: auto (- space(base)) auto auto;
+                    width: 0;
+                    height: 0;
+                    margin: auto auto auto 0;
 
-                    border: 1px solid color(dark, darker);
-                    border-radius: 35px;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-left: 10px solid color(light);
                 }
             }
         }

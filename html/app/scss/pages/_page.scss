@@ -1,8 +1,5 @@
 &[role='page'] {
     >header {
-        display: flex;
-        align-content: center;
-        width: 100%;
         figure {
             position: relative;
 
@@ -54,28 +51,6 @@
 
                     font-size: (font-size(xxbig));
                     text-transform: uppercase;
-                }
-            }
-        }
-        .container {
-            position: relative;
-            display: flex;
-            align-content: center;
-            &>div {
-                display: flex;
-                align-content: center;
-                &>div {
-                    display: flex;
-                    align-self: center;
-
-                    @for $index from 1 through 6 {
-                        h#{$index}{
-                            display: flex;
-                            align-self: center;
-                            font-size: (font-size(xxxbig) + .3125);
-                            text-transform: uppercase;
-                        }
-                    }
                 }
             }
         }

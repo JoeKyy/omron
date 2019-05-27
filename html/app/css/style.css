@@ -1035,87 +1035,43 @@ main {
   main[role='single'] > footer {
     padding: 48px 0;
     background-color: #e2e3e3; }
-  main[role='page'] > header {
-    display: flex;
-    align-content: center;
+  main[role='page'] > header figure {
+    position: relative;
+    max-width: 100%;
     width: 100%; }
-    main[role='page'] > header figure {
-      position: relative;
+    main[role='page'] > header figure picture {
       max-width: 100%;
       width: 100%; }
-      main[role='page'] > header figure picture {
+      main[role='page'] > header figure picture img {
         max-width: 100%;
         width: 100%; }
-        main[role='page'] > header figure picture img {
-          max-width: 100%;
-          width: 100%; }
-      main[role='page'] > header figure figcaption {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        margin: 0 auto; }
-        @media (min-width: 64.0625em) {
-          main[role='page'] > header figure figcaption {
-            max-width: 1140px; } }
-        main[role='page'] > header figure figcaption h2 {
-          max-width: 35%;
-          margin: 0;
-          font-size: 2.1875rem;
-          text-transform: uppercase; }
-          @media (max-width: 64em) {
-            main[role='page'] > header figure figcaption h2 {
-              max-width: 25%;
-              margin-left: 48px;
-              font-size: 1.875rem; } }
-          @media (max-width: 40em) {
-            main[role='page'] > header figure figcaption h2 {
-              max-width: 35%;
-              margin-left: 24px;
-              font-size: 1.25rem; } }
-    main[role='page'] > header .container {
-      position: relative;
+    main[role='page'] > header figure figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       display: flex;
-      align-content: center; }
-      main[role='page'] > header .container > div {
-        display: flex;
-        align-content: center; }
-        main[role='page'] > header .container > div > div {
-          display: flex;
-          align-self: center; }
-          main[role='page'] > header .container > div > div h1 {
-            display: flex;
-            align-self: center;
-            font-size: 3.25rem;
-            text-transform: uppercase; }
-          main[role='page'] > header .container > div > div h2 {
-            display: flex;
-            align-self: center;
-            font-size: 3.25rem;
-            text-transform: uppercase; }
-          main[role='page'] > header .container > div > div h3 {
-            display: flex;
-            align-self: center;
-            font-size: 3.25rem;
-            text-transform: uppercase; }
-          main[role='page'] > header .container > div > div h4 {
-            display: flex;
-            align-self: center;
-            font-size: 3.25rem;
-            text-transform: uppercase; }
-          main[role='page'] > header .container > div > div h5 {
-            display: flex;
-            align-self: center;
-            font-size: 3.25rem;
-            text-transform: uppercase; }
-          main[role='page'] > header .container > div > div h6 {
-            display: flex;
-            align-self: center;
-            font-size: 3.25rem;
-            text-transform: uppercase; }
+      align-items: center;
+      margin: 0 auto; }
+      @media (min-width: 64.0625em) {
+        main[role='page'] > header figure figcaption {
+          max-width: 1140px; } }
+      main[role='page'] > header figure figcaption h2 {
+        max-width: 35%;
+        margin: 0;
+        font-size: 2.1875rem;
+        text-transform: uppercase; }
+        @media (max-width: 64em) {
+          main[role='page'] > header figure figcaption h2 {
+            max-width: 25%;
+            margin-left: 48px;
+            font-size: 1.875rem; } }
+        @media (max-width: 40em) {
+          main[role='page'] > header figure figcaption h2 {
+            max-width: 35%;
+            margin-left: 24px;
+            font-size: 1.25rem; } }
   main[role='page'] article {
     min-height: calc(100vh - 525px);
     padding: 48px 0; }
@@ -1168,6 +1124,8 @@ main {
     color: #55565a;
     font-size: 1.4625rem;
     line-height: 1.2; }
+  main[role='product'] {
+    min-height: calc(100vh - 525px); }
 
 /*------------------------------------*\
     SECTION

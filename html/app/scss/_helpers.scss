@@ -114,6 +114,10 @@ label {
     background-color: color(light, lightest);
 }
 
+.bg--light-darken {
+    background-color: color(light, darken);
+}
+
 .bg--dark-base {
     background-color: color(dark);
 }

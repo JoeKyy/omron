@@ -51,7 +51,7 @@ $(function () {
 		$('.slide').slick('resize');
 	});
 
-	$("main[role='page'].loop nav select").change(function() {
+	$("main[role='page'].loop nav select, main[role='page'].product nav select").change(function() {
 		window.location = $(this).find("option:selected").val();
 	});
 

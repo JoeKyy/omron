@@ -1,3 +1,45 @@
-&[role='product'] {
-    min-height: calc(100vh - 525px);
+&[role='page'] {
+    &.product {
+        nav {
+            ul {
+                @include responsive(medium) {
+                    display: flex;
+                    align-content: center;
+                }
+
+                display: none;
+
+
+                li {
+                    @include responsive(medium) {
+                        display: flex;
+                        align-items: center;
+
+                        padding: space(g) space(base);
+
+                        border-left: 1px solid color(dark);
+                    }
+
+                    padding: space(g) space(base);
+
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    border-left: 1px solid color(dark);
+
+                    &:first-child {
+                        @include responsive(medium) {
+                            border-left: none;
+                        }
+                    }
+                }
+            }
+
+            select {
+                @include responsive(medium) {
+                    display: none;
+                }
+            }
+        }
+    }
 }

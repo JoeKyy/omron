@@ -43,5 +43,31 @@
                 }
             }
         }
+
+        .productFeature {
+            th {
+                @include responsive(medium) {
+                    width: 500px;
+
+                    white-space: nowrap !important;
+                }
+
+                width: inherit;
+                white-space: inherit !important;
+
+            }
+        }
+
+        .productAbout {
+            h5 {
+                margin: 0 0 space(p);
+
+                color: color(primary);
+            }
+
+            p {
+                font-size: font-size(normal);
+            }
+        }
     }
 }

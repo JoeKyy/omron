@@ -13,10 +13,6 @@
             border: 0;
             cursor: pointer;
 
-            @include responsive (large, max) {
-                top: -5vh;
-            }
-
             &.slick-prev {
                 position: absolute;
                 left: 0;

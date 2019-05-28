@@ -28,9 +28,6 @@
     font-size: 0;
     border: 0;
     cursor: pointer; }
-    @media (max-width: 64em) {
-      .slide button.slick-arrow {
-        top: -5vh; } }
     .slide button.slick-arrow.slick-prev {
       position: absolute;
       left: 0;
@@ -1147,6 +1144,18 @@ main {
   @media (min-width: 48.0625em) {
     main[role='page'].product.list nav select {
       display: none; } }
+  main[role='page'].product .productFeature th {
+    width: inherit;
+    white-space: inherit !important; }
+    @media (min-width: 48.0625em) {
+      main[role='page'].product .productFeature th {
+        width: 500px;
+        white-space: nowrap !important; } }
+  main[role='page'].product .productAbout h5 {
+    margin: 0 0 8px;
+    color: #0068b7; }
+  main[role='page'].product .productAbout p {
+    font-size: 0.875rem; }
 
 /*------------------------------------*\
     SECTION

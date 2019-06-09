@@ -24,7 +24,12 @@ if (function_exists('add_theme_support'))
     add_image_size('large', 700, '', true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('350x350', 350, 350, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('475x300', 475, 300, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('550x340', 550, 340, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('992x300', 992, 300, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('1920x520', 1920, 520, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -82,29 +87,29 @@ function omron_nav()
 }
 
 // Load omrom Blank scripts (header.php)
-function omron_header_scripts()
-{
-    if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
+// function omron_header_scripts()
+// {
+//     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-    	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
-        wp_enqueue_script('conditionizr'); // Enqueue it!
+//     	wp_register_script('conditionizr', get_template_directory_uri() . '/js/lib/conditionizr-4.3.0.min.js', array(), '4.3.0'); // Conditionizr
+//         wp_enqueue_script('conditionizr'); // Enqueue it!
 
-        wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+//         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
+//         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('omronscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('omronscripts'); // Enqueue it!
-    }
-}
+//         wp_register_script('omronscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+//         wp_enqueue_script('omronscripts'); // Enqueue it!
+//     }
+// }
 
 // Load omrom Blank conditional scripts
-function omron_conditional_scripts()
-{
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
-    }
-}
+// function omron_conditional_scripts()
+// {
+//     if (is_page('pagenamehere')) {
+//         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
+//         wp_enqueue_script('scriptname'); // Enqueue it!
+//     }
+// }
 
 // Load omrom Blank styles
 function omron_styles()
@@ -255,14 +260,11 @@ function omromwp_custom_post($length)
 }
 
 // Create the Custom Excerpts callback
-function omromwp_excerpt($length_callback = '', $more_callback = '')
+function omromwp_excerpt($length_callback = '')
 {
     global $post;
     if (function_exists($length_callback)) {
         add_filter('excerpt_length', $length_callback);
-    }
-    if (function_exists($more_callback)) {
-        add_filter('excerpt_more', $more_callback);
     }
     $output = get_the_excerpt();
     $output = apply_filters('wptexturize', $output);
@@ -364,12 +366,12 @@ function omroncomments($comment, $args, $depth)
 \*------------------------------------*/
 
 // Add Actions
-add_action('init', 'omron_header_scripts'); // Add Custom Scripts to wp_head
-add_action('wp_print_scripts', 'omron_conditional_scripts'); // Add Conditional Page Scripts
+//add_action('init', 'omron_header_scripts'); // Add Custom Scripts to wp_head
+//add_action('wp_print_scripts', 'omron_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'omron_styles'); // Add Theme Stylesheet
 add_action('init', 'register_omrom_menu'); // Add omrom Blank Menu
-add_action('init', 'create_post_type_omrom'); // Add our omrom Blank Custom Post Type
+// add_action('init', 'create_post_type_omrom'); // Add our omrom Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'omromwp_pagination'); // Add our omrom Pagination
 
@@ -409,8 +411,8 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
 // Shortcodes
-add_shortcode('omrom_shortcode_demo', 'omrom_shortcode_demo'); // You can place [omrom_shortcode_demo] in Pages, Posts now.
-add_shortcode('omrom_shortcode_demo_2', 'omrom_shortcode_demo_2'); // Place [omrom_shortcode_demo_2] in Pages, Posts now.
+// add_shortcode('omrom_shortcode_demo', 'omrom_shortcode_demo'); // You can place [omrom_shortcode_demo] in Pages, Posts now.
+// add_shortcode('omrom_shortcode_demo_2', 'omrom_shortcode_demo_2'); // Place [omrom_shortcode_demo_2] in Pages, Posts now.
 
 // Shortcodes above would be nested like this -
 // [omrom_shortcode_demo] [omrom_shortcode_demo_2] Here's the page title! [/omrom_shortcode_demo_2] [/omrom_shortcode_demo]
@@ -420,57 +422,120 @@ add_shortcode('omrom_shortcode_demo_2', 'omrom_shortcode_demo_2'); // Place [omr
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called omron
-function create_post_type_omrom()
-{
-    register_taxonomy_for_object_type('category', 'omron'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'omron');
-    register_post_type('omron', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('omrom Blank Custom Post', 'omron'), // Rename these to suit
-            'singular_name' => __('omrom Blank Custom Post', 'omron'),
-            'add_new' => __('Add New', 'omron'),
-            'add_new_item' => __('Add New omrom Blank Custom Post', 'omron'),
-            'edit' => __('Edit', 'omron'),
-            'edit_item' => __('Edit omrom Blank Custom Post', 'omron'),
-            'new_item' => __('New omrom Blank Custom Post', 'omron'),
-            'view' => __('View omrom Blank Custom Post', 'omron'),
-            'view_item' => __('View omrom Blank Custom Post', 'omron'),
-            'search_items' => __('Search omrom Blank Custom Post', 'omron'),
-            'not_found' => __('No omrom Blank Custom Posts found', 'omron'),
-            'not_found_in_trash' => __('No omrom Blank Custom Posts found in Trash', 'omron')
-        ),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom omrom Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
-    ));
-}
+// function create_post_type_omrom()
+// {
+//     register_taxonomy_for_object_type('category', 'omron'); // Register Taxonomies for Category
+//     register_taxonomy_for_object_type('post_tag', 'omron');
+//     register_post_type('omron', // Register Custom Post Type
+//         array(
+//         'labels' => array(
+//             'name' => __('omrom Blank Custom Post', 'omron'), // Rename these to suit
+//             'singular_name' => __('omrom Blank Custom Post', 'omron'),
+//             'add_new' => __('Add New', 'omron'),
+//             'add_new_item' => __('Add New omrom Blank Custom Post', 'omron'),
+//             'edit' => __('Edit', 'omron'),
+//             'edit_item' => __('Edit omrom Blank Custom Post', 'omron'),
+//             'new_item' => __('New omrom Blank Custom Post', 'omron'),
+//             'view' => __('View omrom Blank Custom Post', 'omron'),
+//             'view_item' => __('View omrom Blank Custom Post', 'omron'),
+//             'search_items' => __('Search omrom Blank Custom Post', 'omron'),
+//             'not_found' => __('No omrom Blank Custom Posts found', 'omron'),
+//             'not_found_in_trash' => __('No omrom Blank Custom Posts found in Trash', 'omron')
+//         ),
+//         'public' => true,
+//         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+//         'has_archive' => true,
+//         'supports' => array(
+//             'title',
+//             'editor',
+//             'excerpt',
+//             'thumbnail'
+//         ), // Go to Dashboard Custom omrom Blank post for supports
+//         'can_export' => true, // Allows export in Tools > Export
+//         'taxonomies' => array(
+//             'post_tag',
+//             'category'
+//         ) // Add Category and Post Tags support
+//     ));
+// }
 
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability
-function omrom_shortcode_demo($atts, $content = null)
-{
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
-}
+// function omrom_shortcode_demo($atts, $content = null)
+// {
+//     return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
+// }
 
 // Shortcode Demo with simple <h2> tag
-function omrom_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
+// function omrom_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
+// {
+//     return '<h2>' . $content . '</h2>';
+// }
+
+function remove_menus() {
+	remove_menu_page( 'index.php' );                        //Dashboard
+	// remove_menu_page( 'jetpack' );                       //Jetpack*
+	// remove_menu_page( 'edit.php' );                      //Posts
+	remove_menu_page( 'upload.php' );                       //Media
+	// remove_menu_page( 'edit.php?post_type=page' );       //Pages
+	remove_menu_page( 'woocommerce' );                      //Woocommerce
+	remove_menu_page( 'edit-comments.php' );                //Comments
+	// remove_menu_page( 'themes.php' );                    //Appearance
+	// remove_menu_page( 'plugins.php' );                   //Plugins
+	// remove_menu_page( 'users.php' );                     //Users
+	// remove_menu_page( 'tools.php' );                     //Tools
+	// remove_menu_page( 'options-general.php' );           //Settings
 }
+add_action( 'admin_menu', 'remove_menus' );
+
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Carrousel.
+	 */
+
+	$labels = array(
+		"name" => __( "Carrousel", "custom-post-type-ui" ),
+		"singular_name" => __( "Carrousel", "custom-post-type-ui" ),
+	);
+
+	$args = array(
+		"label" => __( "Carrousel", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"delete_with_user" => false,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => "carrousel",
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"exclude_from_search" => true,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "carrousel", "with_front" => true ),
+		"query_var" => true,
+		"menu_position" => 5,
+		"supports" => array( "title", "thumbnail", "custom-fields" ),
+	);
+
+	register_post_type( "carrousel", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
+
+
+function custom_theme_setup() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'custom_theme_setup' );
 
 ?>

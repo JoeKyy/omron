@@ -1,10 +1,17 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<main role="page" class="loop">
+		<header>
+			<div class="container">
+				<div class="row align-content-start">
+					<div class="col-xl mt-5">
+						<h2><?php _e( 'Latest Posts', 'omron' ); ?></h2>
+					</div>
+				</div>
+			</div>
+		</header>
 		<!-- section -->
 		<section>
-
-			<h1><?php _e( 'Latest Posts', 'omron' ); ?></h1>
 
 			<?php get_template_part('loop'); ?>
 
